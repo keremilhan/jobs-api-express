@@ -49,11 +49,13 @@ paths:
               allOf:
               - $ref: '#/components/schemas/registerrequest'
               - example:
-                  name: aTe
-                  email: at@gmail.com
+                  name: anna
+                  email: anna@gmail.com
+                  password: secret
             example:
-              name: aTe
-              email: at@gmail.com
+                  name: anna
+                  email: anna@gmail.com
+                  password: secret
         required: true
       responses:
         '200':
@@ -89,11 +91,11 @@ paths:
               allOf:
               - $ref: '#/components/schemas/CreateaJobRequest'
               - example:
-                  company: ate face2
-                  position: intern2
+                  company: google
+                  position: full stack developer
             example:
-              company: ate face2
-              position: intern2
+                  company: google
+                  position: full stack developer
         required: true
       responses:
         '200':
@@ -137,11 +139,11 @@ paths:
               allOf:
               - $ref: '#/components/schemas/UpdateJobRequest'
               - example:
-                  company: new
-                  position: new position
+                  company: google
+                  position: full stack developer
             example:
-              company: new
-              position: new position
+                  company: google
+                  position: full stack developer
         required: true
       responses:
         '200':
@@ -191,8 +193,9 @@ components:
         email:
           type: string
       example:
-        name: aTe
-        email: at@gmail.com
+                  name: anna
+                  email: anna@gmail.com
+                  password: secret
     CreateaJobRequest:
       title: CreateaJobRequest
       required:
@@ -205,8 +208,8 @@ components:
         position:
           type: string
       example:
-        company: ate face2
-        position: intern2
+        company: facebook
+        position: front end developer
     UpdateJobRequest:
       title: UpdateJobRequest
       required:
@@ -219,8 +222,8 @@ components:
         position:
           type: string
       example:
-        company: new
-        position: new position
+        company: facebook
+        position: front end developer
   securitySchemes:
     bearer:
       type: http
